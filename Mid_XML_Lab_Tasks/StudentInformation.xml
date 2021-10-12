@@ -1,0 +1,31 @@
+<sudentInformation>
+        <student ID = "1">
+		        <slno> 23 </slno>
+				<name> John Carter </name>
+				<admissionDate date = "1">
+				        <day> 25 </day>
+						<month> 12 </month>
+						<year> 2015 </year>
+				</admissionDate>
+		</student>
+		
+		<student ID = "2">
+		        <slno> 29 </slno>
+				<name> Bob Marshal </name>
+				<admissionDate date = "2">
+				        <day> 13 </day>
+						<month> 01 </month>
+						<year> 1999 </year>
+				</admissionDate>
+		</student>
+		
+		<student ID = "3">
+		        <slno> 35 </slno>
+				<name> Clart Kent </name>
+				<admissionDate date = "3">
+				        <day> 17 </day>
+						<month> 06 </month>
+						<year> 2005 </year>
+				</admissionDate>
+		</student>
+</sudentInformation>
