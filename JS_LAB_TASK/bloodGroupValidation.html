@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloodgroup Validation</title>
+</head>
+
+<body>
+    <form id="myform" action="bloodGroupValidation.php" onsubmit="return ValidateForm()" method="post">
+        <label for="bloodGroup">Blood group</label><br />
+        <select name="bloodGroup" id="bloodGroup">
+            <option value="">Select blood group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+        <span id="error"></span> <br /><br />
+        <input type="submit" name="submit" id="submit" value="Submit" />
+<script>
+    function ValidateForm() {
+        let bloodGroup = document.getElementById("bloodGroup").value;
+        if(bloodGroup == "") {
+            document.getElementById("error").innerHTML = "Select your blood group";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
+</body>
+
+</html>

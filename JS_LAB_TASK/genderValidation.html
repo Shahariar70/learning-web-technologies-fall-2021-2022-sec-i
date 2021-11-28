@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gender Validation</title>
+</head>
+
+<body>
+    <form id="myForm" action="genderValidation.php" onsubmit="return ValidateForm()" method="post">
+        <label for="gender">Gender</label><br />
+        <input type="radio" name="gender" class="gender" value="Male" />Male
+        <input type="radio" name="gender" class="gender" value="Female" />Female
+        <input type="radio" name="gender" class="gender" value="Others" />Others
+        <span id="error"></span> <br /><br />
+        <input type="submit" name="submit" id="submit" value="Submit" />
+    </form>
+    <script>
+        function ValidateForm() {
+            let gender = document.forms["myForm"]["gender"];
+            if (gender.value.length <= "") {
+                document.getElementById("error").innerHTML = "At least one is to be selected";
+                return false;
+            } else {
+                return true;
+            }
+            /* if(gender[0].checked == false && gender[1].checked == false && gender[2].checked == false) {
+                return false;
+            }
+            else {
+                return true;
+            } */
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Validation</title>
+</head>
+
+<body>
+    <form id="myform" action="nameValidation.php" onsubmit="return ValidateForm()" method="post">
+        <label for="fname">Name</label><br />
+        <input type="text" name="name" id="fname" required />
+        <span id="error"></span> <br /><br />
+        <input type="submit" name="submit" id="submit" value="Submit" />
+    </form>
+<script>
+    function ValidateForm() {
+        let name = document.getElementById("fname").value;
+        if (name.length < 2) {
+            document.getElementById("error").innerHTML = "Name too short";
+            return false;
+        } else if (!name.match(/^[A-Za-z.-]+$/)) {
+            document.getElementById("error").innerHTML = "Invalid Name";
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+</body>
+
+</html>

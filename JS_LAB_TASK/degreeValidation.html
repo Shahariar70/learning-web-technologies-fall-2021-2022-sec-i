@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Degree Validation</title>
+</head>
+
+<body>
+    <form id="myForm" action="degreeValidation.php" onsubmit="return ValidateForm()" method="post">
+        <label for="degree">Degree</label><br />
+        <input type="checkbox" name="degree" class="degree" value="SSC">SSC
+        <input type="checkbox" name="degree" class="degree" value="HSC">HSC
+        <input type="checkbox" name="degree" class="degree" value="BSc">BSc
+        <span id="error"></span> <br /><br />
+        <input type="submit" name="submit" id="submit" value="Submit" />
+    </form>
+<script>
+    function ValidateForm() {
+        let degree = document.forms["myForm"]["degree"]; 
+        if(degree[0].checked == false && degree[1].checked == false && degree[2].checked == false) {
+            document.getElementById("error").innerHTML = "Please Select One";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
+</body>
+
+</html>

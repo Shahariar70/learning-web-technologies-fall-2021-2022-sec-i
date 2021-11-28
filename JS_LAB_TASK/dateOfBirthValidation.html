@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Of Birth Validation</title>
+</head>
+
+<body>
+    <form id="myform" action="dateOfBirthValidation.php" onsubmit="return ValidateForm()" method="post">
+        <label for="dob">Date of birth</label><br />
+        <input type="date" name="dob" id="dob" required />
+        <span id="error"></span> <br /><br />
+        <input type="submit" name="submit" id="submit" value="Submit" />
+    </form>
+</body>
+
+</html>
